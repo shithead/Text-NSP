@@ -552,6 +552,7 @@ foreach $source (@sourceFiles)
 
         while ( /$tokenizerRegex/g ) {
             $token = $&;
+            chomp($token);
             processToken($token);
         }
     }
